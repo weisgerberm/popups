@@ -1,0 +1,99 @@
+<T3DataStructure>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:popups/Resources/Private/Language/locallang_db.xlf:tx_popups_popup.name</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <settings.content>
+            <TCEforms>
+              <label>LLL:EXT:popups/Resources/Private/Language/locallang_db.xlf:content</label>
+                <config>
+                    <type>text</type>
+                    <cols>30</cols>
+                    <rows>5</rows>
+                    <enableRichtext>1</enableRichtext>
+                </config>
+            </TCEforms>
+          </settings.content>
+            <settings.image>
+                <TCEforms>
+                    <label>LLL:EXT:popups/Resources/Private/Language/locallang_db.xlf:image</label>
+                    <config>
+                        <type>inline</type>
+                        <maxitems>1</maxitems>
+                        <foreign_table>sys_file_reference</foreign_table>
+                        <foreign_label>uid_local</foreign_label>
+                        <foreign_selector>uid_local</foreign_selector>
+                        <foreign_selector_fieldTcaOverride type="array">
+                            <config>
+                                <appearance>
+                                    <elementBrowserType>file</elementBrowserType>
+                                    <elementBrowserAllowed>gif,jpg,png,jpeg,svg,png</elementBrowserAllowed>
+                                </appearance>
+                            </config>
+                        </foreign_selector_fieldTcaOverride>
+                        <overrideChildTca type="array">
+                            <columns type="array">
+                                <uid_local type="array">
+                                    <config>
+                                        <appearance>
+                                            <elementBrowserType>file</elementBrowserType>
+                                            <elementBrowserAllowed>gif,jpg,png,jpeg,svg,png</elementBrowserAllowed>
+                                        </appearance>
+                                    </config>
+                                </uid_local>
+                            </columns>
+                        </overrideChildTca>
+                        <filter type="array">
+                            <userFunc>TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren</userFunc>
+                            <parameters>
+                                <allowedFileExtensions>gif,jpg,png,jpeg,svg,png</allowedFileExtensions>
+                            </parameters>
+                        </filter>
+                        <appearance type="array">
+                            <useSortable>1</useSortable>
+                            <showPossibleLocalizationRecords>1</showPossibleLocalizationRecords>
+                            <showRemovedLocalizationRecords>1</showRemovedLocalizationRecords>
+                            <showSynchronizationLink>1</showSynchronizationLink>
+                            <showAllLocalizationLink>1</showAllLocalizationLink>
+                            <elementBrowserEnabled>1</elementBrowserEnabled>
+                            <headerThumbnail>
+                                <field>uid_local</field>
+                                <height>45</height>
+                                <width>45c</width>
+                            </headerThumbnail>
+                            <enabledControls>
+                                <info>1</info>
+                                <new>1</new>
+                                <localize>1</localize>
+                                <dragdrop>1</dragdrop>
+                            </enabledControls>
+                        </appearance>
+
+                    </config>
+                </TCEforms>
+            </settings.image>
+            <settings.imageLink>
+                <label>LLL:EXT:popups/Resources/Private/Language/locallang_db.xlf:image-link</label>
+                <config>
+                    <type>group</type>
+                    <internal_type>db</internal_type>
+                    <allowed>pages</allowed>
+                    <size>1</size>
+                    <maxitems>1</maxitems>
+                    <show_thumbs>1</show_thumbs>
+                    <wizards>
+                        <suggest>
+                            <type>suggest</type>
+                        </suggest>
+                    </wizards>
+                </config>
+            </settings.imageLink>
+        </el>
+      </ROOT>
+    </sDEF>
+  </sheets>
+</T3DataStructure>

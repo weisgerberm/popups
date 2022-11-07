@@ -1,0 +1,32 @@
+<html v:schemaLocation="http://fluidtypo3.org/schemas/vhs-1.8.5.xsd" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <div class="modal fade" id="popups-{contentUid}" tabindex="-1" role="dialog" aria-labelledby="popups-{contentUid}-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg text-center" role="document">
+            <div class="modal-content">
+                <div class="modal-header align-self-end">
+                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <f:format.html>{settings.content}</f:format.html>
+                    <f:if condition="{settings.imageLink}">
+                        <f:then>
+                            <f:link.typolink parameter="{settings.imageLink}">
+                                <f:image src="{settings.image}" class="img-fluid" treatIdAsReference="1" width="760m" />
+                            </f:link.typolink>
+                        </f:then>
+                        <f:else>
+                            <f:image src="{settings.image}" class="img-fluid" treatIdAsReference="1" width="760m" />
+
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</f:section>
+</html>

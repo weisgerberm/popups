@@ -19,8 +19,8 @@
         },
         "extensionKey": "popups",
         "name": "Popups",
-        "originalExtensionKey": "",
-        "originalVendorName": "",
+        "originalExtensionKey": "popups",
+        "originalVendorName": "Weisgerber",
         "persons": [
             {
                 "company": "",
@@ -29,13 +29,23 @@
                 "role": "Developer"
             }
         ],
-        "plugins": [],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Application => show",
+                    "noncacheableActions": ""
+                },
+                "description": "Displays a single popup automatically",
+                "key": "popup",
+                "name": "Popup"
+            }
+        ],
         "vendorName": "Weisgerber"
     },
     "wires": [],
     "storagePath": "\/home\/u676675988\/domains\/schummer-finanz.de\/public_html\/typo3conf\/ext\/",
     "log": {
-        "last_modified": "2022-11-07 05:20",
+        "last_modified": "2022-11-07 06:07",
         "extension_builder_version": "10.0.2",
         "be_user": " (1)"
     }
